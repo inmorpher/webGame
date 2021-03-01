@@ -1,0 +1,41 @@
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    min-height: 100vh
+    width: 100%
+
+.block
+    position: absolute
+    width: 300px
+    height: 180px
+    transition: .5s
+    z-index: 999
+    opacity: 1
+    &-img
+        &__head, &__body
+            position: absolute
+        &__head
+        &__body
+            bottom: 0
+            left: 0
+            width: 100%
+    &__hidden
+        display: none
+        opacity: 0
+        z-index: -999
+
+.layout-frame
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(0,0,0, .5)
+    z-index: 999
+    opacity: 0
+    transition: .3s ease-out
+    &__visible
+        opacity: 1
